@@ -1,0 +1,55 @@
+---
+// components/CardsEco.astro
+const services = [
+  {
+    title: "Cremación simple",
+    description: "Sin entrega de cenizas, pero con el mismo respeto en todo el proceso.",
+    color: "#7A8B74",
+    image: "/images/Cards/card-child-rottweiler.jpg",
+    anchor: "cremacion"
+  },
+  {
+    title: "Bolsa biodegradable",
+    description: "Opción ecológica para quienes desean conservar las cenizas en una forma simple.",
+    color: "#C9C6C0",
+    image: "/images/Cards/bolsa-compost.jpg",
+    anchor: "bolsas"
+  },
+  {
+    title: "Urna personalizada",
+    description: "Incluye el nombre de tu mascota grabado con amor. Hecha artesanalmente.",
+    color: "#D8B7A4",
+    image: "/images/Cards/urna-placeholder.jpg",
+    anchor: "urna"
+  },
+];
+
+---
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10 font-serif">
+  {services.map((service, index) => (
+    <a 
+      href={`/servicios#${service.anchor}`} 
+      class="group relative flex flex-col rounded-xl shadow-lg overflow-hidden h-[400px] transform transition-transform duration-300 hover:scale-[1.02]"
+      style={`background-color: ${service.color};`}
+    >
+      <!-- Diagonal Image -->
+      <div 
+        class="absolute w-full h-1/2 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-105 rounded-t-xl"
+        style={`background-image: url('${service.image}'); clip-path: polygon(0 0, 100% 0, ${index % 2 === 0 ? '100% 85%' : '100% 85%'}, 0 100%);`}
+      >
+        <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-[${service.color}]"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="relative h-full flex flex-col justify-end p-6 pt-64">
+        <div class="bg-white/90 backdrop-blur-sm p-5 rounded-lg shadow-md">
+          <h3 class="text-3xl font-bold mb-3 tracking-wide font-serif" style={`color: ${service.color};`}>
+            {service.title}
+          </h3>
+          <p class="text-lg text-gray-700 leading-relaxed font-serif">{service.description}</p>
+        </div>
+      </div>
+    </a>
+  ))}
+</div>
+

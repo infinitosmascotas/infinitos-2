@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Caveat:wght@400&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -79,7 +82,7 @@ p {
 }
 
 .menu-item-active:not(.menu-item-highlighted) {
-	@apply text-fuchsia-500 font-bold;
+	@apply text-musgo font-bold;
 }
 
 [x-cloak] {
@@ -108,17 +111,11 @@ label {
 	@apply bg-fuchsia-500;
 }
 
+/* tailwind.css */
 body,
 section.bg-white {
-	background-image: url('/pattern.jpg');
-	background-repeat: repeat;
+	background-image: none;
 }
 
-/* caveat-brush-regular - latin */
-@font-face {
-	font-display: swap;
-	font-family: "Caveat Brush";
-	font-style: normal;
-	font-weight: 400;
-	src: url("/fonts/caveat/caveat-brush-v11-latin-regular.woff2") format("woff2");
-}
+
+

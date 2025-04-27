@@ -1,0 +1,11 @@
+---
+const { src, alt = "", list = [] } = Astro.props;
+---
+
+<img
+  src={src}
+  alt={alt}
+  class={Array.isArray(list) ? list.join(" ") : list}
+  loading="lazy"
+  decoding="async"
+/>

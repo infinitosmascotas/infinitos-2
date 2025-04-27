@@ -1,0 +1,41 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import Section from "~/components/Section.astro";
+import Container from "~/components/Container.astro";
+import Heading from "~/components/Heading.astro";
+import FormContact from "~/components/forms/FormContact.astro";
+import { phone,email,hours,zonas } from "~/data/config.ts";
+---
+
+<Layout>
+	<Section>
+		<Container>
+			<div class="grid grid-cols-1 gap-8 lg:gap-16 xl:gap-24 lg:grid-cols-2">
+				<div>
+					<Heading>
+						<h3 slot="heading-title" class="h3 text-[#3A725F] text-left font-serif">Contacto</h3>
+						<p class="mt-4 text-lg lg:text-xl leading-relaxed font-serif">
+							Contactanos para consultas o para coordinar el servicio de cremación de tu mascota. Estamos aquí para ayudarte en este momento difícil.
+						  </p>
+					</Heading>
+
+					<FormContact />
+				</div>
+
+				<div>
+					<Heading>
+						<h2 slot="heading-title" class="h3 text-[#3A725F] text-left font-serif">Horarios</h2>
+						<div slot="heading-content">
+							<!-- Columna 2 -->
+				
+					<p class="block text-2xl font-bold mb-2"><span>{hours.label}</span></p>
+					
+					<div class="space-y-4">
+						<h3 slot="heading-title" class="h3 text-[#3A725F] text-left font-serif">Áreas de cobertura</h3>
+						<p class="block text-2xl font-bold mb-2"><span>{zonas.label}</span></p>
+				  </div>
+				</div>
+						</div>
+					</Container>
+				</Section>
+			</Layout>

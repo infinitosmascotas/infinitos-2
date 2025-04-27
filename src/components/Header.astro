@@ -1,7 +1,8 @@
 ---
 import { menuMain } from "~/data/menus.js";
 import LogoContainer from "~/components//LogoContainer.astro";
-import SocialMediaIcons from "./SocialMediaIcons.astro";
+import { phone } from "~/data/config.ts";
+
 
 const rmTrailingSlash = (path: string): string => {
   return path.endsWith("/") && path.length > 1 
@@ -16,7 +17,7 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 	<div>
 		<div id="header-wrapper" class="fixed top-4 z-40 inset-x-0 w-full">
 			<div class="container">
-				<div class="container max-lg:px-4 max-w-none bg-white shadow rounded-xl py-4 lg:py-6">
+				<div class="container max-lg:px-4 max-w-none bg-white shadow rounded-xl py-4 lg:py-3">
 					<nav class="flex relative items-center justify-between" aria-label="Global">
 						<a href="/" class="relative z-10">
 							<LogoContainer />
@@ -48,10 +49,11 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 							<div class="flex gap-x-12 justify-end xl:justify-center items-center">
 								{
 									menuMain.map((item) => (
-										<a
-											href={item.url}
-											class={`transition text-base/6 font-semibold hover:text-fuchsia-500 ${pathname === item.url ? "menu-item-active" : ""}`}
-										>
+									<a
+									href={item.url}
+									class={`transition text-xl font-semibold hover:text-[#7A8B74] ${pathname === item.url ? "menu-item-active" : ""}`}
+									>
+
 											{item.name}
 										</a>
 									))
@@ -59,7 +61,15 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 							</div>
 						</div>
 						<div class="relative z-10 flex items-center gap-x-4 max-xl:hidden">
-							<SocialMediaIcons />
+							<!-- Botón de teléfono similar al de EternaPet -->
+							<a
+							href={phone.href}
+							class="block py-2 text-center mt-0 bg-oliva text-hueso rounded-xl mx-auto w-max px-6 font-semibold shadow hover:bg-musgo transition"
+						  >
+							Llamanos al <span>{phone.label}</span>
+
+						  </a> 
+						
 						</div>
 					</nav>
 				</div>
@@ -108,6 +118,14 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 									</a>
 								))
 							}
+							<!-- Botón de teléfono en el menú móvil -->
+							<a 
+								href={phone.href}
+								class="block py-2 text-center mt-4 bg-oliva text-white rounded-lg mx-auto w-max px-6 font-semibold"
+							>
+								<span>{phone.display}</span>
+
+							</a>
 						</div>
 					</div>
 				</div>

@@ -1,0 +1,73 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Nuestros Servicios">
+  <!-- Encabezado con Imagen -->
+  <section class="relative h-80 flex items-center justify-center bg-cover bg-center" style="background-image: url('/back.jpg');">
+    <div class="bg-black bg-opacity-40 w-full h-full absolute top-0 left-0"></div>
+    <h1 class="relative z-10 text-white text-4xl md:text-6xl font-serif font-bold">Nuestros Servicios</h1>
+  </section>
+
+  <!-- Cards de Servicios -->
+  <section class="py-16 bg-[#f7f7f7]">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Cremación simple -->
+        <div class="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-lg transition">
+          <img src="\crema.jpg" alt="Cremación simple" class="rounded-lg mb-4 h-40 w-full object-cover" />
+          <h2 class="text-[#3A725F] text-3xl font-serif font-bold mb-2">Cremación Simple</h2>
+          <p class="text-gray-700 font-serif mb-4 text-base font-bold text-lg">Cremación individual respetuosa, con o sin entrega de cenizas.</p>
+          <ul class="text-gray-600 font-serif text-lg space-y-2">
+            <li>Cremación sin devolución de cenizas</li>
+            <li>Certificado de cremación</li>
+            <li>Souvenir recordatorio</li>
+            <li>Tarjeta plantable con huella</li>
+          </ul>
+        </div>
+
+        <!-- Bolsas biodegradables -->
+        <div class="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-lg transition">
+          <img src="/bag.jpg" alt="Bolsas biodegradables" class="rounded-lg mb-4 h-40 w-full object-cover" />
+          <h2 class="text-[#3A725F] text-3xl font-serif font-bold mb-2">Bolsas Biodegradables</h2>
+          <p class="text-gray-700 font-serif font-bold mb-4 text-base text-lg">Conservación sustentable en bolsa o caja de cartón biodegradable.</p>
+          <ul class="text-gray-600 font-serif text-lg space-y-2">
+            <li>Bolsa biodegradable</li>
+            <li>Caja de cartón kraft</li>
+            <li>Certificado de cremación</li>
+            <li>Tarjeta plantable</li>
+          </ul>
+        </div>
+
+        <!-- Urnas -->
+        <div class="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-lg transition">
+          <img src="/urna.jpg" alt="Urna de madera" class="rounded-lg mb-4 h-40 w-full object-cover" />
+          <h2 class="text-[#3A725F] text-3xl font-serif font-bold mb-2">Urnas Personalizadas</h2>
+          <p class="text-gray-700 font-serif font-bold mb-4 text-base text-lg">Urnas de madera artesanal, con nombre y diseño personalizado.</p>
+          <ul class="text-gray-600 font-serif text-lg space-y-2">
+            <li>Urna de madera grabada</li>
+            <li>Certificado de cremación</li>
+            <li>Souvenir y tarjeta plantable</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ¿Qué necesitamos saber? -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-[#3A725F] text-3xl md:text-4xl font-serif font-bold mb-8">¿Qué necesitamos para cotizar tu servicio?</h2>
+      <p class="text-gray-700 font-serif mb-6 text-xl">Para brindarte el mejor servicio personalizado, necesitamos:</p>
+      <ul class="text-gray-600 font-serif text-base text-lg space-y-4">
+        <li>• Especie de tu mascota</li>
+        <li>• Peso de tu mascota</li>
+        <li>• Dirección de retiro</li>
+      </ul>
+      <p class="text-gray-700 font-serif mt-8 text-lg">Aceptamos todos los medios de pago.</p>
+    </div>
+  </section>
+
+</Layout>

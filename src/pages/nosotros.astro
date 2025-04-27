@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Container from '../components/Container.astro';
+import Section from '../components/Section.astro';
+import Image from '../components/Image.astro';
+---
+
+<Layout title="Nosotros - Infinitos" pageTitle="Nosotros" description="Conocé más sobre Infinitos, crematorio de mascotas.">
+
+  <Section class:list={["bg-[#F5F3EF] py-18"]}>
+    <Container class:list={["grid md:grid-cols-2 gap-10 items-center"]}>
+      
+      <!-- Texto -->
+      <div class="font-serif text-[#3A725F] space-y-6">
+        <h2 class="text-4xl font-bold font-serif">Quiénes Somos</h2>
+        <p class="mt-4 text-lg lg:text-xl leading-relaxed font-serif">
+          Infinitos es una empresa que ofrece servicios de cremación de mascotas con una visión respetuosa y sensible.
+          Nos encargamos desde el retiro de tu mascota hasta la entrega de las cenizas, garantizando tranquilidad en cada paso.
+        </p>
+        <ul class="list-disc pl-5 text-lg lg:text-xl space-y-2 text-[#555] font-serif">
+          <li>Crematorio propio</li>
+          <li>Traslado incluido</li>
+          <li>Certificado de cremación y habilitación municipal</li>
+          <li>Atención 24 hs.</li>
+          <li>Guardado de cenizas por 60 días</li>
+        </ul>
+      </div>
+
+      <!-- Imagen -->
+      <div class="h-auto max-h-[400px] overflow-hidden rounded-2xl shadow-lg">
+        <img
+          src="/nosotros.jpg"
+          alt="Familia con su mascota"
+          class="w-full h-full object-cover"
+        />
+      </div>
+        
+    </Container>
+  </Section>
+
+  <!-- Sección emocional -->
+  <Section class:list={["bg-white py-10"]}>
+    <Container class:list={["text-center text-[#3A725F] font-serif"]}>
+      <h2 class="text-3xl font-semibold mb-2 font-serif">Acompañamos con respeto y sensibilidad</h3>
+      <p class="text-xl max-w-2xl mx-auto font-serif">
+        Nuestro compromiso es brindar un servicio digno y cálido en un momento difícil. Estamos para acompañarte en cada paso.
+      </p>
+    </Container>
+  </Section>
+
+</Layout>

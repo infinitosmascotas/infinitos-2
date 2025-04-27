@@ -5,12 +5,20 @@ export default {
 		extend: {
 			fontFamily: {
 				caveat: ["Caveat Brush", "serif"],
+				serif: ['"Crimson Pro"', 'serif'],
+				sans: ['"Inter"', "sans-serif"],
 			},
 			container: {
 				center: true,
 				padding: {
 					DEFAULT: "2rem",
 				},
+			},
+			colors: {
+				oliva: '#7A8B74',
+				hueso: '#F5F2ED',
+				musgo: '#5F6F52',
+			
 			},
 			typography: ({ theme }) => ({
 				DEFAULT: {

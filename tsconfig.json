@@ -6,6 +6,8 @@
 		"strictNullChecks": true,
 		"allowJs": true,
 		"baseUrl": ".",
+		"jsx": "preserve",
+		"types": ["astro/astro-jsx"],
 		"paths": {
 			"~/*": ["src/*"]
 		}

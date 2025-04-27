@@ -4,19 +4,19 @@ export const menuMain = [
 		url: "/",
 	},
 	{
-		name: "About Us",
-		url: "/about-us",
+		name: "Nosotros",
+		url: "/nosotros",
 	},
 	{
-		name: "Adopt",
-		url: "/cats",
+		name: "Servicios",
+		url: "/servicios",
 	},
+	//{
+		//name: "Obituarios",
+		//url: "/obituarios",
+	//}//,//
 	{
-		name: "Blog",
-		url: "/blog",
-	},
-	{
-		name: "Contact",
-		url: "/contact",
+		name: "Contacto",
+		url: "/contacto",
 	},
 ];
