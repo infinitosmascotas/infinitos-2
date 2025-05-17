@@ -6,12 +6,12 @@ import { Image, Picture } from "astro:assets";
 import Button from "~/components/Button.astro";
 import Heading from "~/components/Heading.astro";
 import CardsNew from "~/components/CardsEco.astro";
-import { phone,email,hours,zonas } from "~/data/config.ts";
+import { phone,email,hours,zonas, wp} from "~/data/config.ts";
 
 
 
 // Images
-import NewBackground from "~/assets/images/infinitos-paisajew.webp";
+import NewBackground from "~/assets/images/manopata.webp";
 
 ---
 
@@ -19,7 +19,7 @@ import NewBackground from "~/assets/images/infinitos-paisajew.webp";
 	<!-- Hero Section similar a EternaPet -->
 	<Section class:list={"relative"}>
 		<!-- FONDO DE COLOR DE RESPALDO -->
-		<div class="absolute inset-0 bg-[#5f6f52] z-0"></div>
+		<div class="absolute inset-0 bg-[#D8B7A4] z-0"></div>
 		<Picture
 			src={NewBackground}
 			alt="Perro y persona compartiendo un momento de despedida"
@@ -33,14 +33,14 @@ import NewBackground from "~/assets/images/infinitos-paisajew.webp";
 		<Container class:list={"relative z-10 h-full min-h-[500px] lg:min-h-svh lg:h-svh"}>
 			<div class="flex flex-col items-center justify-center h-full text-center transition-opacity duration-500 ease-in">
 				<div class="prose prose-xl prose-invert text-white max-w-3xl">
-					<h1 class="font-serif">
-						<span class="block text-4xl lg:text-6xl uppercase text-white tracking-wider">Crematorio de mascotas</span>
+					<h1 class="font-sans">
+						<span class="block text-4xl lg:text-6xl uppercase text-white tracking-wider">Cremación de mascotas</span>
 					</h1>
 					<p class="mt-4 text-lg lg:text-xl text-white">
-						Acompañamos tu despedida con respeto y cuidado
+						Su huella por siempre
 					</p>
 					<div class="not-prose mt-8">
-						<Button url="/contacto" color="white"> Contactanos </Button>
+						<Button url="https://wa.me/5491132813334" target="_blank" rel="noopener noreferrer", color="white"> Contactanos </Button>
 					</div>
 				</div>
 			</div>
@@ -50,44 +50,44 @@ import NewBackground from "~/assets/images/infinitos-paisajew.webp";
 	<Section class:list={["bg-hueso"]}>
 		<Container>
 			<Heading>
-				<h2 slot="heading-title" class="h2 text-[#3A725F] text-left font-serif">Servicios</h2>
+				<h2 slot="heading-title" class="h2 text-musgo text-left font-sans">Servicios</h2>
 			</Heading>
 			<CardsNew />
 		</Container>
 	</Section>
 	
-	<section class="bg-hueso py-20">
-		<div class="max-w-6xl mx-auto px-6">
-		  <!-- Título principal -->
-		  <h2 class="h2 text-[#3A725F] font-serif text-center mb-16 tracking-wide">
-			Nuestro Proceso
-		  </h2>
-	  
-		  <!-- Cards -->
-		  <div class="grid gap-12 md:grid-cols-3">
-			<!-- Card 1: Traslado -->
-			<div class="bg-white p-8 rounded-2xl shadow-xl text-center font-serif border border-musgo/20">
-			  <img src="/truck-.svg" alt="Icono traslado" class="mx-auto w-24 h-24 mb-6" />
-			  <h3 class="text-2xl font-serif font-semibold text-musgo mb-3">Traslado</h3>
-			  <p class="text-lg text-musgo/80">Retiramos a tu mascota del domicilio o veterinaria.</p>
+		<section class="bg-hueso py-20 font-sans">
+			<div class="max-w-6xl mx-auto px-6">
+			<!-- Título principal -->
+			<h2 class="h2 text-musgo font-sans text-center mb-16 tracking-wide">
+				Nuestro Proceso
+			</h2>
+		
+			<!-- Cards -->
+			<div class="grid gap-12 md:grid-cols-3">
+				<!-- Card 1: Traslado -->
+				<div class="bg-white p-8 rounded-2xl shadow-xl text-center font-sans border border-musgo/20">
+				<img src="/lorry.png" alt="Icono traslado" class="mx-auto w-24 h-24 mb-6" />
+				<h3 class="text-2xl font-sans font-semibold text-musgo mb-3">Traslado</h3>
+				<p class="text-lg text-musgo/80">Retiramos a tu mascota del domicilio o veterinaria.</p>
+				</div>
+		
+				<!-- Card 2: Cremación -->
+				<div class="bg-white p-8 rounded-2xl shadow-xl text-center font-sans border border-musgo/20">
+				<img src="/paw.png" alt="Icono cremación" class="mx-auto w-24 h-24 mb-6" />
+				<h3 class="text-2xl font-sans font-semibold text-musgo mb-3">Cremación</h3>
+				<p class="text-lg text-musgo/80">Individual y certificada. Opción de presenciarla.</p>
+				</div>
+		
+				<!-- Card 3: Entrega -->
+				<div class="bg-white p-8 rounded-2xl shadow-xl text-center font-sans border border-musgo/20">
+				<img src="/love.png" alt="Icono entrega" class="mx-auto w-w-24 h-24 mb-6" />
+				<h3 class="text-2xl font-sans font-semibold text-musgo mb-3">Entrega</h3>
+				<p class="text-lg text-musgo/80">Cenizas entregadas en urna o caja, donde vos elijas.</p>
+				</div>
 			</div>
-	  
-			<!-- Card 2: Cremación -->
-			<div class="bg-white p-8 rounded-2xl shadow-xl text-center font-serif border border-musgo/20">
-			  <img src="/paw-.svg" alt="Icono cremación" class="mx-auto w-24 h-24 mb-6" />
-			  <h3 class="text-2xl font-serif font-semibold text-musgo mb-3">Cremación</h3>
-			  <p class="text-lg text-musgo/80">Individual y certificada. Opción de presenciarla.</p>
 			</div>
-	  
-			<!-- Card 3: Entrega -->
-			<div class="bg-white p-8 rounded-2xl shadow-xl text-center font-serif border border-musgo/20">
-			  <img src="/hand-heart.svg" alt="Icono entrega" class="mx-auto w-w-24 h-24 mb-6" />
-			  <h3 class="text-2xl font-serif font-semibold text-musgo mb-3">Entrega</h3>
-			  <p class="text-lg text-musgo/80">Cenizas entregadas en urna o caja, donde vos elijas.</p>
-			</div>
-		  </div>
-		</div>
-	  </section>
+		</section>
 	  
 	  
 	  
@@ -98,36 +98,36 @@ import NewBackground from "~/assets/images/infinitos-paisajew.webp";
 		  alt="Fondo de despedida" 
 		  class:list={["absolute inset-0 w-full h-full object-cover opacity-30"]} 
 		/>
-		<div class="absolute inset-0 bg-gradient-to-r from-[#3A725F]/90 to-[#7A8B74]/90"></div>
+		<div class="absolute inset-0 bg-[#2E4A3A]"></div>
 	  
-		<Container class:list={["relative z-10 py-20 text-white font-serif"]}>
+		<Container class:list={["relative z-10 py-20 text-hueso font-sans"]}>
 		  <div class="grid md:grid-cols-2 gap-10 items-start">
 			
 			<!-- Bloque principal: Contacto + Botón -->
-			<div class="text-left space-y-6 flex flex-col items-start justify-center">
-			  <h2 class="text-4xl font-bold leading-tight">Contactanos para despedir a tu mascota con respeto</h2>
+			<div class="text-center space-y-6 flex flex-col items-center justify-center">
+			  <h2 class="text-4xl justify-center font-sans leading-tight">Contactanos para despedir a tu mascota con respeto</h2>
 			  <div class="w-full flex justify-center">
-				<a class="inline-block bg-white text-[#3A725F] font-semibold py-3 px-10 text-lg rounded-full shadow hover:bg-[#f5f5f5] transition" href="/contacto">
+				<a class="inline-block bg-white text-[#3A725F] font-semibold py-3 px-10 text-lg rounded-full shadow hover:bg-[#f5f5f5] transition" href="https://wa.me/5491132813334" target="_blank" rel="noopener noreferrer">
 				  Contacto
 				</a>
 			  </div>
 			</div>
 	  
 			<!-- Información adicional: Detalles de contacto -->
-			<div class="grid md:grid-cols-2 gap-8 text-lg font-serif">
+			<div class="grid md:grid-cols-2 gap-8 text-lg font-sans">
 				<!-- Columna 1 -->
 				<div class="space-y-6">
-				  <h3 class="text-2xl font-bold font-serif">Contacto</h3>
+				  <h3 class="text-2xl font-bold font-sans">Contacto</h3>
 				  <div class="flex items-center gap-3">
-					<img src="/whatsapp.png" alt="Whatsapp" class="w-6 h-6 opacity-80 hover:opacity-100 transition-opacity duration-300" />
+					<img src="/whatsapp-blanco.png" alt="Whatsapp" class="w-6 h-6 opacity-80 hover:opacity-100 transition-opacity duration-300" />
 					<span>+54 9 11 3281-3334</span>
 				  </div>				  
 				  <div class="flex items-center gap-3">
-					<img src="/telephone.png" alt="Teléfono" class="w-6 h-6 opacity-80 hover:opacity-100 transition-opacity duration-300" />
+					<img src="/phone.png" alt="Teléfono" class="w-6 h-6 opacity-80 hover:opacity-100 transition-opacity duration-300" />
 					<span>{phone.label}</span>
 				  </div>
 				  <div class="flex items-center gap-3">
-					<img src="/envelope.png" alt="Email" class="w-6 h-6 opacity-80 hover:opacity-100 transition-opacity duration-300" />
+					<img src="/email.png" alt="Email" class="w-6 h-6 opacity-80 hover:opacity-100 transition-opacity duration-300" />
 					<span>{email.label}</span>
 
 				  </div>
@@ -135,12 +135,13 @@ import NewBackground from "~/assets/images/infinitos-paisajew.webp";
 			  
 				<!-- Columna 2 -->
 				<div class="space-y-6">
-				  <h3 class="text-2xl font-bold font-serif">Horarios</h3>
+				  <h3 class="text-2xl font-bold font-sans">Horarios</h3>
 				  <span>{hours.label}</span>
+				  <span>{wp.label}</span>
 
 				  
 				  <div class="space-y-4">
-				  <h3 class="text-2xl font-bold font-serif">Áreas de cobertura</h3>
+				  <h3 class="text-2xl font-bold font-sans">Áreas de cobertura</h3>
 				  <span>{zonas.label}</span>
 
 				</div>

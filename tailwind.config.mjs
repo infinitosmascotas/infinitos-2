@@ -18,6 +18,8 @@ export default {
 				oliva: '#7A8B74',
 				hueso: '#F5F2ED',
 				musgo: '#5F6F52',
+				sepiaClaro: '#D8B7A4',
+        		marronSuave: '#9C7862',
 			
 			},
 			typography: ({ theme }) => ({

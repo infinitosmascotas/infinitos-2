@@ -2,34 +2,41 @@
 // components/CardsEco.astro
 const services = [
   {
-    title: "Cremación simple",
-    description: "Sin entrega de cenizas, pero con el mismo respeto en todo el proceso.",
-    color: "#7A8B74",
-    image: "/images/Cards/card-child-rottweiler.jpg",
+    title: "Bolsas Biodegradables",
+    description: "Esta hermosa alternativa ecológica compostable nos permite dar a las mascotas un tributo respetuoso.",
+    color: "#9C7862",
+    image: "/images/Cards/bolsa.jpg",
     anchor: "cremacion"
   },
   {
-    title: "Bolsa biodegradable",
-    description: "Opción ecológica para quienes desean conservar las cenizas en una forma simple.",
+    title: "Urnas de Madera",
+    description: "Nuestras urnas de madera honran el profundo vínculo que compartimos con nuestros fieles compañeros.",
     color: "#C9C6C0",
-    image: "/images/Cards/bolsa-compost.jpg",
+    image: "/images/Cards/urna-madera.jpeg",
     anchor: "bolsas"
   },
   {
-    title: "Urna personalizada",
-    description: "Incluye el nombre de tu mascota grabado con amor. Hecha artesanalmente.",
+    title: "Entrega Parcial",
+    description: "Para quienes prefieren algo más pequeño y delicado, ofrecemos urnas parciales de resina en diversos diseños y tamaños.",
+    color: "#9C7862",
+    image: "/images/Cards/mini-urnas.jpg",
+    anchor: "urna"
+  },
+    {
+    title: "Sin Entrega",
+    description: "A veces este ciclo cierra con la partida de nuestra mascota. Esta opción es ideal para quienes prefieren no recibir las cenizas.",
     color: "#D8B7A4",
-    image: "/images/Cards/urna-placeholder.jpg",
+    image: "/images/Cards/constancia.png",
     anchor: "urna"
   },
 ];
 
 ---
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10 font-serif">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-10 font-sans">
   {services.map((service, index) => (
     <a 
       href={`/servicios#${service.anchor}`} 
-      class="group relative flex flex-col rounded-xl shadow-lg overflow-hidden h-[400px] transform transition-transform duration-300 hover:scale-[1.02]"
+      class="group relative flex flex-col rounded-xl shadow-lg overflow-hidden h-[500px] transform transition-transform duration-300 hover:scale-[1.02]"
       style={`background-color: ${service.color};`}
     >
       <!-- Diagonal Image -->
@@ -43,10 +50,10 @@ const services = [
       <!-- Content -->
       <div class="relative h-full flex flex-col justify-end p-6 pt-64">
         <div class="bg-white/90 backdrop-blur-sm p-5 rounded-lg shadow-md">
-          <h3 class="text-3xl font-bold mb-3 tracking-wide font-serif" style={`color: ${service.color};`}>
+          <h3 class="text-3xl font-bold mb-3 tracking-wide font-sans" style={`color: ${service.color};`}>
             {service.title}
           </h3>
-          <p class="text-lg text-gray-700 leading-relaxed font-serif">{service.description}</p>
+          <p class="text-lg text-gray-700 leading-relaxed font-sans">{service.description}</p>
         </div>
       </div>
     </a>

@@ -9,6 +9,8 @@ import alpinejs from "@astrojs/alpinejs";
 
 import tailwind from "@astrojs/tailwind";
 
+import react from '@astrojs/react';
+
 // https://astro.build/config
 export default defineConfig({
 	site: "https://pawstronaut.netlify.app",
@@ -17,6 +19,7 @@ export default defineConfig({
 		tailwind(),
 		alpinejs(),
 		mdx(),
+		[react()],
 		(await import("@playform/inline")).default({
 			Critters: true,
 		}),

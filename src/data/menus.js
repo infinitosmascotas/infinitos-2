@@ -17,6 +17,6 @@ export const menuMain = [
 	//}//,//
 	{
 		name: "Contacto",
-		url: "/contacto",
+		url: "https://wa.me/5491132813334",
 	},
 ];

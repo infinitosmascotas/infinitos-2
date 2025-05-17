@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SwiperSlider from '../components/SwiperInit.jsx';
+---
+
+
+<Layout title="Nuestros Servicios">
+  <!-- Encabezado con Imagen -->
+  <section class="relative h-96 flex items-center justify-center bg-cover bg-center" style="background-image: url('/atardecer playa2.jpg');">
+    <div class="bg-black bg-opacity-40 w-full h-full absolute top-0 left-0"></div>
+    <h1 class="relative z-10 text-white text-4xl md:text-6xl font-sans font-bold">Nuestros Servicios</h1>
+  </section>
+
+  <!-- Bolsas Biodegradables -->
+  <section class="py-16 bg-[#f7f7f7]">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Card: Bolsas Biodegradables -->
+        <div class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col md:flex-row hover:shadow-lg transition duration-300 h-96">
+          <!-- Slider lateral (Swiper) -->
+        <div class="relative w-full md:w-1/2 h-full overflow-hidden">
+          <SwiperSlider client:visible 
+          swiperClass="bolsaSwiper"
+          images={['/bolsa.jpg', '/crema.jpg', '/urna.jpg']}/>
+        </div>
+
+
+  <!-- Contenido -->
+  <div class="p-6 flex flex-col justify-center items-center text-center md:w-1/2">
+    <div>
+      <h2 class="text-[#5E4634] text-2xl font-sans font-bold mb-3">Bolsas Biodegradables</h2>
+      <p class="text-gray-700 font-sans text-base mb-4 max-w-md mx-auto">
+        Una opción simple y ecológica para despedirse con amor. Las bolsas compostables permiten una entrega limpia y respetuosa con el entorno.
+      </p>
+
+      <!-- Accordion para “Incluye” -->
+      <details class="mt-4 text-left max-w-md mx-auto w-full">
+        <summary class="cursor-pointer text-[#3A725F] font-sans font-semibold mb-2">¿Qué incluye?</summary>
+        <ul class="text-gray-600 font-sans text-base space-y-1 list-disc list-inside mt-2">
+          <li>Bolsa compostable con etiqueta</li>
+          <li>Tarjeta plantable con huella</li>
+          <li>Souvenir de Infinitos</li>
+          <li>Bolsa de tela protectora</li>
+          <li>Certificado de cremación</li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</div>
+
+      <!-- Card: Urna de Madera -->
+<div class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col md:flex-row hover:shadow-lg transition duration-300 h-96">
+  <!-- Slider -->
+  <div class="relative w-full md:w-1/2 h-full overflow-hidden">
+    <SwiperSlider client:visible 
+      swiperClass="urnaSwiper"
+      images={['/urna-madera.jpg', '/crema.jpg', '/urna.jpg']}/>
+  </div>
+  <!-- Contenido -->
+  <div class="p-6 flex flex-col justify-center items-center text-center md:w-1/2">
+    <div>
+      <h2 class="text-[#5E4634] text-2xl font-sans font-bold mb-3">Urna de Madera</h2>
+      <p class="text-gray-700 font-sans text-base mb-4 max-w-md mx-auto">
+        Una forma cálida y elegante de preservar el recuerdo. Diseñadas para permanecer cerca o como parte de un espacio íntimo en el hogar.
+      </p>
+      <details class="mt-4 text-left max-w-md mx-auto w-full">
+        <summary class="cursor-pointer text-[#3A725F] font-sans font-semibold mb-2">¿Qué incluye?</summary>
+        <ul class="text-gray-600 font-sans text-base space-y-1 list-disc list-inside mt-2">
+          <li>Caja de madera personalizada</li>
+          <li>Tarjeta plantable con huella</li>
+          <li>Souvenir de Infinitos</li>
+          <li>Bolsa de tela protectora</li>
+          <li>Certificado de cremación</li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</div>
+
+<!-- Card: Entrega Parcial -->
+<div class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col md:flex-row hover:shadow-lg transition duration-300 h-96">
+  <!-- Slider -->
+  <div class="relative w-full md:w-1/2 h-full overflow-hidden">
+    <SwiperSlider client:visible 
+      swiperClass="entregaSwiper"
+      images={['/urna-recina.jpg', '/crema.jpg', '/urna.jpg']}/>
+  </div>
+  <!-- Contenido -->
+  <div class="p-6 flex flex-col justify-center items-center text-center md:w-1/2">
+    <div>
+      <h2 class="text-[#5E4634] text-2xl font-sans font-bold mb-3">Mini Urna</h2>
+      <p class="text-gray-700 font-sans text-base mb-4 max-w-md mx-auto">
+        Para quienes desean conservar una pequeña parte de las cenizas, nuestras urnas de resina son discretas, modernas y con diversas formas.
+      </p>
+      <details class="mt-4 text-left max-w-md mx-auto w-full">
+        <summary class="cursor-pointer text-[#3A725F] font-sans font-semibold mb-2">¿Qué incluye?</summary>
+        <ul class="text-gray-600 font-sans text-base space-y-1 list-disc list-inside mt-2">
+          <li>Mini urna de resina</li>
+          <li>Tarjeta plantable con huella</li>
+          <li>Souvenir de Infinitos</li>
+          <li>Bolsa de tela protectora</li>
+          <li>Certificado de cremación</li>
+          <li>Cenizas restantes en Bolsa Bio</li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</div>
+
+<!-- Card: Urnas Personalizadas -->
+<div class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col md:flex-row hover:shadow-lg transition duration-300 h-96">
+  <!-- Slider -->
+  <div class="relative w-full md:w-1/2 h-full overflow-hidden">
+    <SwiperSlider client:visible 
+      swiperClass="sinenSwiper"
+      images={['/cert.jpg', '/crema.jpg', '/urna.jpg']}/>
+  </div>
+  <!-- Contenido -->
+  <div class="p-6 flex flex-col justify-center items-center text-center md:w-1/2">
+    <div>
+      <h2 class="text-[#5E4634] text-2xl font-sans font-bold mb-3">Sin Entrega</h2>
+      <p class="text-gray-700 font-sans text-base mb-4 max-w-md mx-auto">
+        Esta opción está pensada para quienes eligen dejar partir a su compañero de forma simple, cerrando el ciclo en paz, sin la devolución de las cenizas.
+      </p>
+      <details class="mt-4 text-left max-w-md mx-auto w-full">
+        <summary class="cursor-pointer text-[#3A725F] font-sans font-semibold mb-2">¿Qué incluye?</summary>
+        <ul class="text-gray-600 font-sans text-base space-y-1 list-disc list-inside mt-2">
+          <li>Constancia oficial de cremación</li>
+          <li>Registro interno de trazabilidad</li>
+          <li>Acompañamiento durante el proceso</li>
+          <li>Opción de recibir una tarjeta simbólica digital</li>
+        </ul>
+      </details>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <!-- ¿Qué necesitamos saber? -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-[#3A725F] text-3xl md:text-4xl font-sans font-bold mb-8">¿Qué necesitamos para cotizar tu servicio?</h2>
+      <p class="text-gray-700 font-sans mb-6 text-xl">Para brindarte el mejor servicio personalizado, necesitamos:</p>
+      <ul class="text-gray-600 font-sans text-base text-lg space-y-4">
+        <li>• Especie de tu mascota</li>
+        <li>• Peso de tu mascota</li>
+        <li>• Dirección de retiro</li>
+      </ul>
+      <p class="text-gray-700 font-sans mt-8 text-lg">Aceptamos todos los medios de pago.</p>
+    </div>
+  </section>
+
+</Layout>
+
+
+

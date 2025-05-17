@@ -15,10 +15,9 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 
 <header x-data="{ open: false }" @keydown.window.escape="open = false">
 	<div>
-		<div id="header-wrapper" class="fixed top-4 z-40 inset-x-0 w-full">
-			<div class="container">
-				<div class="container max-lg:px-4 max-w-none bg-white shadow rounded-xl py-4 lg:py-3">
-					<nav class="flex relative items-center justify-between" aria-label="Global">
+		<div id="header-wrapper" class="fixed top-4 z-40 inset-x-0">
+		<div class="container bg-white/60 backdrop-blur-sm shadow rounded-xl py-4 lg:py-3">
+					<nav class="flex relative items-center justify-between h-full" aria-label="Global">
 						<a href="/" class="relative z-10">
 							<LogoContainer />
 						</a>
@@ -30,7 +29,7 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 							>
 								<span class="sr-only">Open main menu</span>
 								<svg
-									class="size-6 text-teal-500"
+									class="size-6 text-marronSuave"
 									fill="none"
 									viewBox="0 0 24 24"
 									stroke-width="1.5"
@@ -51,7 +50,7 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 									menuMain.map((item) => (
 									<a
 									href={item.url}
-									class={`transition text-xl font-semibold hover:text-[#7A8B74] ${pathname === item.url ? "menu-item-active" : ""}`}
+									class={`transition text-xl font-semibold hover:text-[#9C7862] ${pathname === item.url ? "menu-item-active" : ""}`}
 									>
 
 											{item.name}
@@ -64,9 +63,9 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 							<!-- Botón de teléfono similar al de EternaPet -->
 							<a
 							href={phone.href}
-							class="block py-2 text-center mt-0 bg-oliva text-hueso rounded-xl mx-auto w-max px-6 font-semibold shadow hover:bg-musgo transition"
+							class="block py-2 text-center mt-0 bg-marronSuave text-hueso rounded-xl mx-auto w-max px-6 font-semibold shadow hover:bg-oliva transition"
 						  >
-							Llamanos al <span>{phone.label}</span>
+							Contactate al <span>{phone.label}</span>
 
 						  </a> 
 						
@@ -121,7 +120,7 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 							<!-- Botón de teléfono en el menú móvil -->
 							<a 
 								href={phone.href}
-								class="block py-2 text-center mt-4 bg-oliva text-white rounded-lg mx-auto w-max px-6 font-semibold"
+								class="block py-2 text-center mt-4 bg-marronSuave text-white rounded-lg mx-auto w-max px-6 font-semibold"
 							>
 								<span>{phone.display}</span>
 

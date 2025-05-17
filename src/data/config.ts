@@ -6,9 +6,9 @@ export const siteName = "Infinitos";
 export const themeColor = "#FF0000";
 
 export const phone = {
-	href: "tel:+541132813334", // formato correcto internacional, sin espacios
+	href: "https://wa.me/5491132813334", // destino whatsapp
 	label: "11 3281-3334",      // formato visual amigable
-	display: "📞 11 3281-3334", // si querés en algunos casos mostrar el emoji directamente
+	display: "11 3281-3334", // si querés en algunos casos mostrar el emoji directamente
 };
 
 
@@ -42,8 +42,13 @@ export const socialMedia = {
 };
 
 export const hours = {
-	label: "Todos los días de 8:00 a 19:00 hs",
+	label: "Todos los días de 8:00 a 21:00 hs",
 };
+
+export const wp = {
+	label: "Whatsapp las 24 hs",
+};
+
 
 export const zonas = {
 	label: "CABA y GBA",

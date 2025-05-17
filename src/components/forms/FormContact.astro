@@ -1,56 +1,101 @@
 ---
+// No se necesita lógica de servidor en este archivo
 ---
-
-<form action="#" class="text-[#3A725F] font-serif">
-    <div class="flex flex-col gap-8">
-  
-      <!-- Nombre -->
-      <div>
-        <label for="name" class="block text-2xl font-bold mb-2">Nombre</label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          required
-          class="w-full rounded-lg border border-gray-300 p-3 text-base font-serif focus:outline-none focus:ring-2 focus:ring-[#3A725F]"
-        />
-      </div>
-  
-      <!-- Email -->
-      <div>
-        <label for="email" class="block text-2xl font-bold mb-2">Correo electrónico</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="tucorreo@ejemplo.com"
-          required
-          class="w-full rounded-lg border border-gray-300 p-3 text-base font-serif focus:outline-none focus:ring-2 focus:ring-[#3A725F]"
-        />
-      </div>
-  
-      <!-- Mensaje -->
-      <div>
-        <label for="message" class="block text-2xl font-bold mb-2">Mensaje</label>
-        <textarea
-          name="message"
-          id="message"
-          rows="4"
-          required
-          class="w-full rounded-lg border border-gray-300 p-3 text-base font-serif focus:outline-none focus:ring-2 focus:ring-[#3A725F]"
-        ></textarea>
-      </div>
-  
-      <!-- Botón -->
-      <div>
-        <button
-          type="submit"
-          class="bg-[#3A725F] text-white font-serif text-lg font-semibold px-8 py-3 rounded-lg hover:bg-[#2c5c4c] transition-colors duration-300"
-        >
-          Enviar
-        </button>
-      </div>
-  
+<form id="contactForm" class="text-[#3A725F] font-serif">
+  <div class="flex flex-col gap-8">
+    <!-- Nombre -->
+    <div>
+      <label for="name" class="block text-2xl font-bold mb-2">Nombre</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        required
+        class="w-full rounded-lg border border-gray-300 p-3 text-base font-serif focus:outline-none focus:ring-2 focus:ring-[#3A725F]"
+      />
     </div>
-  </form>
-  
+
+    <!-- Email -->
+    <div>
+      <label for="email" class="block text-2xl font-bold mb-2">Correo electrónico</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="tucorreo@ejemplo.com"
+        required
+        class="w-full rounded-lg border border-gray-300 p-3 text-base font-serif focus:outline-none focus:ring-2 focus:ring-[#3A725F]"
+      />
+    </div>
+
+    <!-- Mensaje -->
+    <div>
+      <label for="message" class="block text-2xl font-bold mb-2">Mensaje</label>
+      <textarea
+        name="message"
+        id="message"
+        rows="4"
+        required
+        class="w-full rounded-lg border border-gray-300 p-3 text-base font-serif focus:outline-none focus:ring-2 focus:ring-[#3A725F]"
+      ></textarea>
+    </div>
+
+    <!-- Botón -->
+    <div>
+      <button
+        type="submit"
+        class="bg-[#3A725F] text-white font-serif text-lg font-semibold px-8 py-3 rounded-lg hover:bg-[#2c5c4c] transition-colors duration-300"
+      >
+        Enviar
+      </button>
+    </div>
+
+    <!-- Mensaje de estado -->
+    <div id="formStatus" class="text-xl font-bold mt-2"></div>
+  </div>
+</form>
+
+<script is:inline>
+  const form = document.getElementById("contactForm");
+  const status = document.getElementById("formStatus");
+
+  if (form && status) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const nombre = form.name.value.trim();
+      const email = form.email.value.trim();
+      const mensaje = form.message.value.trim();
+
+      if (!nombre || !email || !mensaje) {
+        status.textContent = "Por favor completa todos los campos.";
+        status.style.color = "#e63946";
+        return;
+      }
+
+      try {
+        const res = await fetch("/api/send-to-hubspot", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ nombre, email, telefono: "", mensaje }),
+        });
+
+        const data = await res.json();
+
+        if (data.success) {
+          status.textContent = "¡Gracias por tu mensaje! Te responderemos pronto.";
+          status.style.color = "#3A725F";
+          form.reset();
+        } else {
+          status.textContent = "Hubo un error al enviar. Intentá más tarde.";
+          status.style.color = "#e63946";
+        }
+      } catch (error) {
+        status.textContent = "Error de red. Por favor intentá nuevamente.";
+        status.style.color = "#e63946";
+      }
+    });
+  }
+</script>

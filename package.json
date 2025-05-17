@@ -11,11 +11,15 @@
   "dependencies": {
     "@astrojs/alpinejs": "^0.4.1",
     "@astrojs/mdx": "^4.0.3",
+    "@astrojs/react": "^4.2.7",
     "@astrojs/tailwind": "^5.1.4",
     "@playform/inline": "^0.1.0",
     "@types/alpinejs": "^3.13.11",
     "alpinejs": "^3.14.8",
     "astro": "^5.1.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "swiper": "^11.2.6",
     "tailwindcss": "^3.4.17"
   },
   "devDependencies": {

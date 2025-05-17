@@ -2,72 +2,209 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
+
 <Layout title="Nuestros Servicios">
   <!-- Encabezado con Imagen -->
-  <section class="relative h-80 flex items-center justify-center bg-cover bg-center" style="background-image: url('/back.jpg');">
+  <section class="relative h-96 flex items-center justify-center bg-cover bg-center" style="background-image: url('/atardecer playa2.jpg');">
     <div class="bg-black bg-opacity-40 w-full h-full absolute top-0 left-0"></div>
-    <h1 class="relative z-10 text-white text-4xl md:text-6xl font-serif font-bold">Nuestros Servicios</h1>
+    <h1 class="relative z-10 text-white text-4xl md:text-6xl font-sans font-bold">Nuestros Servicios</h1>
   </section>
 
-  <!-- Cards de Servicios -->
-  <section class="py-16 bg-[#f7f7f7]">
-    <div class="container mx-auto px-6">
-      <div class="grid md:grid-cols-3 gap-8">
+  <!-- Cards -->
+<section class="py-16 bg-[#f7f7f7]">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-wrap gap-6 justify-center">
 
-        <!-- Cremación simple -->
-        <div class="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-lg transition">
-          <img src="\crema.jpg" alt="Cremación simple" class="rounded-lg mb-4 h-40 w-full object-cover" />
-          <h2 class="text-[#3A725F] text-3xl font-serif font-bold mb-2">Cremación Simple</h2>
-          <p class="text-gray-700 font-serif mb-4 text-base font-bold text-lg">Cremación individual respetuosa, con o sin entrega de cenizas.</p>
-          <ul class="text-gray-600 font-serif text-lg space-y-2">
-            <li>Cremación sin devolución de cenizas</li>
-            <li>Certificado de cremación</li>
-            <li>Souvenir recordatorio</li>
-            <li>Tarjeta plantable con huella</li>
-          </ul>
+      <!-- Card: Bolsas Biodegradables -->
+       <div class="w-full md:w-[48%]">
+      <div class="max-w-xl mx-auto p-[2px] rounded-2xl bg-gradient-to-br from-[#a0d2c4] to-[#e1f4ec]">
+        <div class="bg-white rounded-[15px] p-6 text-center shadow-md hover:shadow-lg transition duration-300">
+
+          <h2 class="text-[#5E4634] text-2xl md:text-3xl font-sans font-bold mb-4">
+            Bolsas Biodegradables
+          </h2>
+          <p class="text-gray-700 font-sans text-base md:text-lg mb-6">
+            Una opción simple y ecológica para despedirse con amor. Las bolsas compostables permiten una entrega limpia y respetuosa con el entorno.
+          </p>
+
+          <!-- Accordion para “¿Qué incluye?” -->
+          <details class="text-left max-w-md mx-auto w-full mt-4">
+            <summary class="cursor-pointer text-[#3A725F] font-sans font-semibold mb-2">
+              ¿Qué incluye?
+            </summary>
+            <ul class="text-gray-600 font-sans text-base md:text-lg space-y-1 list-disc list-inside mt-2">
+              <li>Bolsa compostable con etiqueta</li>
+              <li>Tarjeta plantable con huella</li>
+              <li>Souvenir de Infinitos</li>
+              <li>Bolsa de tela protectora</li>
+              <li>Certificado de cremación</li>
+            </ul>
+          </details>
+
         </div>
-
-        <!-- Bolsas biodegradables -->
-        <div class="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-lg transition">
-          <img src="/bag.jpg" alt="Bolsas biodegradables" class="rounded-lg mb-4 h-40 w-full object-cover" />
-          <h2 class="text-[#3A725F] text-3xl font-serif font-bold mb-2">Bolsas Biodegradables</h2>
-          <p class="text-gray-700 font-serif font-bold mb-4 text-base text-lg">Conservación sustentable en bolsa o caja de cartón biodegradable.</p>
-          <ul class="text-gray-600 font-serif text-lg space-y-2">
-            <li>Bolsa biodegradable</li>
-            <li>Caja de cartón kraft</li>
-            <li>Certificado de cremación</li>
-            <li>Tarjeta plantable</li>
-          </ul>
-        </div>
-
-        <!-- Urnas -->
-        <div class="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-lg transition">
-          <img src="/urna.jpg" alt="Urna de madera" class="rounded-lg mb-4 h-40 w-full object-cover" />
-          <h2 class="text-[#3A725F] text-3xl font-serif font-bold mb-2">Urnas Personalizadas</h2>
-          <p class="text-gray-700 font-serif font-bold mb-4 text-base text-lg">Urnas de madera artesanal, con nombre y diseño personalizado.</p>
-          <ul class="text-gray-600 font-serif text-lg space-y-2">
-            <li>Urna de madera grabada</li>
-            <li>Certificado de cremación</li>
-            <li>Souvenir y tarjeta plantable</li>
-          </ul>
-        </div>
-
       </div>
+      </div>
+ 
+
+     <!-- Card: Urna de Madera -->
+      <div class="w-full md:w-[48%]">
+<div class="max-w-xl mx-auto p-[2px] rounded-2xl bg-gradient-to-br from-[#d9ccc1] to-[#f5f5f5]">
+  <div class="bg-white rounded-[15px] p-6 text-center shadow-md hover:shadow-lg transition duration-300">
+
+    <h2 class="text-[#5E4634] text-2xl md:text-3xl font-sans font-bold mb-4">
+      Urna de Madera
+    </h2>
+    <p class="text-gray-700 font-sans text-base md:text-lg mb-6">
+      Una forma cálida y elegante de preservar el recuerdo. Diseñadas para permanecer cerca o formar parte de un espacio íntimo en el hogar.
+    </p>
+
+    <!-- Accordion para “¿Qué incluye?” -->
+    <details class="text-left max-w-md mx-auto w-full mt-4">
+      <summary class="cursor-pointer text-[#3A725F] font-sans font-semibold mb-2">
+        ¿Qué incluye?
+      </summary>
+      <ul class="text-gray-600 font-sans text-base md:text-lg space-y-1 list-disc list-inside mt-2">
+        <li>Caja de madera personalizada</li>
+        <li>Tarjeta plantable con huella</li>
+        <li>Souvenir de Infinitos</li>
+        <li>Bolsa de tela protectora</li>
+        <li>Certificado de cremación</li>
+      </ul>
+    </details>
+
+  </div>
+</div>
+</div>
+
+
+<!-- Card: Mini Urna -->
+ <div class="w-full md:w-[48%]">
+<div class="max-w-xl mx-auto p-[2px] rounded-2xl bg-gradient-to-br from-[#d9ccc1] to-[#f5f5f5]">
+  <div class="bg-white rounded-[15px] p-6 text-center shadow-md hover:shadow-lg transition duration-300">
+
+    <h2 class="text-[#5E4634] text-2xl md:text-3xl font-sans font-bold mb-4">Mini Urna</h2>
+    <p class="text-gray-700 font-sans text-base md:text-lg mb-6">
+      Para quienes desean conservar una pequeña parte de las cenizas. Nuestras urnas de resina son discretas, modernas y con diversas formas.
+    </p>
+
+    <details class="text-left max-w-md mx-auto w-full mt-4">
+      <summary class="cursor-pointer text-[#3A725F] font-sans font-semibold mb-2">¿Qué incluye?</summary>
+      <ul class="text-gray-600 font-sans text-base md:text-lg space-y-1 list-disc list-inside mt-2">
+        <li>Mini urna de resina</li>
+        <li>Tarjeta plantable con huella</li>
+        <li>Souvenir de Infinitos</li>
+        <li>Bolsa de tela protectora</li>
+        <li>Certificado de cremación</li>
+        <li>Cenizas restantes en Bolsa Bio</li>
+      </ul>
+    </details>
+
+  </div>
+</div>
+</div>
+
+<!-- Card: Sin Entrega -->
+ <div class="w-full md:w-[48%]">
+<div class="max-w-xl mx-auto p-[2px] rounded-2xl bg-gradient-to-br from-[#d9ccc1] to-[#f5f5f5]">
+  <div class="bg-white rounded-[15px] p-6 text-center shadow-md hover:shadow-lg transition duration-300">
+
+    <h2 class="text-[#5E4634] text-2xl md:text-3xl font-sans font-bold mb-4">Sin Entrega</h2>
+    <p class="text-gray-700 font-sans text-base md:text-lg mb-6">
+      Esta opción está pensada para quienes eligen dejar partir a su compañero de forma simple, cerrando el ciclo en paz, sin la devolución de las cenizas.
+    </p>
+
+    <details class="text-left max-w-md mx-auto w-full mt-4">
+      <summary class="cursor-pointer text-[#3A725F] font-sans font-semibold mb-2">¿Qué incluye?</summary>
+      <ul class="text-gray-600 font-sans text-base md:text-lg space-y-1 list-disc list-inside mt-2">
+        <li>Constancia oficial de cremación</li>
+        <li>Registro interno de trazabilidad</li>
+        <li>Acompañamiento durante el proceso</li>
+        <li>Opción de recibir una tarjeta simbólica digital</li>
+      </ul>
+    </details>
+
+  </div>
+</div>
+</div>
+
+
     </div>
-  </section>
+  </div>
+</section>
+
+
+
+<!-- Tarjeta Plantable -->
+<section class="py-16 bg-[#fdfaf6]">
+  <div class="container mx-auto px-6 flex flex-col md:flex-row items-start justify-between gap-10">
+    
+    <!-- Texto a la izquierda -->
+    <div class="md:w-1/2 pt-2">
+      <h2 class="text-[#5E4634] text-4xl md:text-5xl font-sans font-bold mb-6">Tarjeta Plantable</h2>
+      <p class="text-gray-700 font-sans text-lg mb-6">
+        El amor se transforma, y también puede florecer. Por eso, cada servicio incluye sin cargo una tarjeta plantable con huella. Podés conservarla como recuerdo o elegir sembrarla para dar vida. Estos son los pasos:
+      </p>
+
+      <ul class="space-y-4">
+        <li class="flex items-start gap-4">
+          <img src="/icono-hidratacion.png" alt="Icono Hidratación" class="w-8 h-8 mt-1" />
+          <div>
+            <h3 class="text-[#3A725F] font-sans font-semibold text-lg">Hidratación</h3>
+            <p class="text-gray-600 font-sans text-base">Sumergí la tarjeta en agua por unos segundos para que se hidrate bien.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-4">
+          <img src="/icono-plantado.png" alt="Icono Plantado" class="w-8 h-8 mt-1" />
+          <div>
+            <h3 class="text-[#3A725F] font-sans font-semibold text-lg">Plantado</h3>
+            <p class="text-gray-600 font-sans text-base">Enterrá la tarjeta en una maceta con tierra limpia, a unos 4 cm de profundidad.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-4">
+          <img src="/icono-riego.png" alt="Icono Riego" class="w-8 h-8 mt-1" />
+          <div>
+            <h3 class="text-[#3A725F] font-sans font-semibold text-lg">Riego</h3>
+            <p class="text-gray-600 font-sans text-base">Rociá con agua toda la superficie para humedecer bien la tierra.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-4">
+          <img src="/icono-paciencia.png" alt="Icono Paciencia y cuidado" class="w-8 h-8 mt-1" />
+          <div>
+            <h3 class="text-[#3A725F] font-sans font-semibold text-lg">Paciencia y cuidado</h3>
+            <p class="text-gray-600 font-sans text-base">En los días siguientes, empezarán a asomar los primeros brotes. Mantené la tierra húmeda y en un lugar con luz natural.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Imagen a la derecha -->
+    <div class="md:w-1/2 flex justify-center">
+      <img src="/tarjeta-plantable.png" alt="Tarjeta plantable" class="rounded-xl shadow-md border border-[#A9C1A2] max-w-sm w-full" />
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
 
   <!-- ¿Qué necesitamos saber? -->
   <section class="py-16 bg-white">
     <div class="container mx-auto px-6 text-center">
-      <h2 class="text-[#3A725F] text-3xl md:text-4xl font-serif font-bold mb-8">¿Qué necesitamos para cotizar tu servicio?</h2>
-      <p class="text-gray-700 font-serif mb-6 text-xl">Para brindarte el mejor servicio personalizado, necesitamos:</p>
-      <ul class="text-gray-600 font-serif text-base text-lg space-y-4">
+      <h2 class="text-[#3A725F] text-3xl md:text-4xl font-sans font-bold mb-8">¿Qué necesitamos para cotizar tu servicio?</h2>
+      <p class="text-gray-700 font-sans mb-6 text-xl">Para brindarte el mejor servicio personalizado, necesitamos:</p>
+      <ul class="text-gray-600 font-sans text-base text-lg space-y-4">
         <li>• Especie de tu mascota</li>
         <li>• Peso de tu mascota</li>
         <li>• Dirección de retiro</li>
       </ul>
-      <p class="text-gray-700 font-serif mt-8 text-lg">Aceptamos todos los medios de pago.</p>
+      <p class="text-gray-700 font-sans mt-8 text-lg">Aceptamos todos los medios de pago.</p>
     </div>
   </section>
 
 </Layout>
+
+
+

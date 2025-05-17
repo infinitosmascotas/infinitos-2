@@ -1,4 +1,13 @@
 .menu-item-active {
-    color: #5F6F52;
+    color: #9C7862 !important;
   }
-  
+.swiper-button-prev,
+.swiper-button-next {
+  color: #9C7862 !important; /* marrón suave */
+  transition: transform 0.3s;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  transform: scale(1.2);
+}
