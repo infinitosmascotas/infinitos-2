@@ -85,9 +85,7 @@
         const data = await res.json();
 
         if (data.success) {
-          status.textContent = "¡Gracias por tu mensaje! Te responderemos pronto.";
-          status.style.color = "#3A725F";
-          form.reset();
+          window.location.href = "/gracias";
         } else {
           status.textContent = "Hubo un error al enviar. Intentá más tarde.";
           status.style.color = "#e63946";
