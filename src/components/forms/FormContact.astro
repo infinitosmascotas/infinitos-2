@@ -5,12 +5,13 @@
   <div class="flex flex-col gap-8">
     <!-- Nombre -->
     <div>
-      <label for="name" class="block text-2xl font-bold mb-2">Nombre</label>
+      <label for="nombre" class="block text-2xl font-bold mb-2">Tu nombre completo</label>
       <input
         type="text"
-        name="name"
-        id="name"
+        name="nombre"
+        id="nombre"
         required
+        placeholder="Tu Nombre"
         class="w-full rounded-lg border border-gray-300 p-3 text-base font-serif focus:outline-none focus:ring-2 focus:ring-[#3A725F]"
       />
     </div>
@@ -28,14 +29,29 @@
       />
     </div>
 
+    <!-- Teléfono -->
+    <div>
+      <label for="telefono" class="block text-2xl font-bold mb-2">Teléfono</label>
+      <input
+        type="tel"
+        name="telefono"
+        id="telefono"
+        placeholder="Ej: 1123456789"
+        class="w-full rounded-lg border border-gray-300 p-3 text-base font-serif focus:outline-none focus:ring-2 focus:ring-[#3A725F]"
+      />
+    </div>
+
+
+
     <!-- Mensaje -->
     <div>
-      <label for="message" class="block text-2xl font-bold mb-2">Mensaje</label>
+      <label for="mensaje" class="block text-2xl font-bold mb-2">Tu mensaje</label>
       <textarea
-        name="message"
-        id="message"
+        name="mensaje"
+        id="mensaje"
         rows="4"
         required
+        placeholder="Contanos en qué podemos ayudarte..."
         class="w-full rounded-lg border border-gray-300 p-3 text-base font-serif focus:outline-none focus:ring-2 focus:ring-[#3A725F]"
       ></textarea>
     </div>
@@ -55,6 +71,7 @@
   </div>
 </form>
 
+
 <script is:inline>
   const form = document.getElementById("contactForm");
   const status = document.getElementById("formStatus");
@@ -63,15 +80,19 @@
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      const nombre = form.name.value.trim();
+      const nombre = form.nombre.value.trim();
       const email = form.email.value.trim();
-      const mensaje = form.message.value.trim();
+      const telefono = form.telefono?.value.trim() || "";
+      const mensaje = form.mensaje.value.trim();
 
-      if (!nombre || !email || !mensaje) {
-        status.textContent = "Por favor completa todos los campos.";
+      const telefonoValido = telefono === "" || /^[0-9\s\-\+()]{7,15}$/.test(telefono);
+
+      if (!nombre || !email || !mensaje || !telefonoValido) {
+        status.textContent = "Por favor completá todos los campos correctamente.";
         status.style.color = "#e63946";
         return;
       }
+
 
       try {
         const res = await fetch("/api/send-to-hubspot", {
@@ -79,7 +100,7 @@
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ nombre, email, telefono: "", mensaje }),
+          body: JSON.stringify({ nombre, email, telefono, mensaje }),
         });
 
         const data = await res.json();
