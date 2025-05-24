@@ -6,8 +6,13 @@ const HUBSPOT_PORTAL_ID = "441758828";
 const HUBSPOT_FORM_GUID = "116784e0-b669-4921-a65f-81f19c0467c2";
 const HUBSPOT_API_URL = `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_GUID}`;
 
+
+
+
+
 export const POST: APIRoute = async ({ request }) => {
   const body = await request.json();
+  
 
   // Validaciones
   const isValidEmail = (email: string) =>
@@ -49,7 +54,7 @@ export const POST: APIRoute = async ({ request }) => {
       { name: "firstname", value: body.nombre },
       { name: "email", value: body.email },
       { name: "phone", value: body.telefono || "" },
-      { name: "message", value: body.mensaje },
+      { name: "texto", value: body.mensaje },
     ],
     context: {
       pageUri: "https://www.infinitosmascotas.com.ar/contacto",
