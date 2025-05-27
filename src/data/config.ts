@@ -3,7 +3,7 @@ export const siteLang = "es-AR";
 export const siteCurrency = "ARS";
 export const siteDomain = "infinitos.com.ar";
 export const siteName = "Infinitos";
-export const themeColor = "#FF0000";
+export const themeColor = "#ffffff";
 
 export const phone = {
 	href: "https://wa.me/5491132813334", // destino whatsapp
@@ -42,7 +42,7 @@ export const socialMedia = {
 };
 
 export const hours = {
-	label: "Todos los días de 8:00 a 21:00 hs",
+	label: "Retiros de Lunes a Sábado de 9:00 a 17:00 hs",
 };
 
 export const wp = {
@@ -51,5 +51,5 @@ export const wp = {
 
 
 export const zonas = {
-	label: "CABA y GBA",
+	label: "CABA - Avellaneda - Lanus - Lomas de Zamora",
 };

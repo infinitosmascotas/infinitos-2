@@ -4,7 +4,7 @@ import Section from "~/components/Section.astro";
 import Container from "~/components/Container.astro";
 import Heading from "~/components/Heading.astro";
 import FormContact from "~/components/forms/FormContact.astro";
-import { phone,email,hours,zonas } from "~/data/config.ts";
+import { phone,email,hours,zonas,wp } from "~/data/config.ts";
 ---
 
 <Layout>
@@ -29,6 +29,7 @@ import { phone,email,hours,zonas } from "~/data/config.ts";
 							<!-- Columna 2 -->
 				
 					<p class="block text-2xl font-bold mb-2"><span>{hours.label}</span></p>
+					<p class="block text-2xl font-bold mb-2"><span>{wp.label}</span></p>
 					
 					<div class="space-y-4">
 						<h3 slot="heading-title" class="h3 text-[#3A725F] text-left font-serif">Áreas de cobertura</h3>

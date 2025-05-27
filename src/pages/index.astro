@@ -8,11 +8,6 @@ import Heading from "~/components/Heading.astro";
 import CardsNew from "~/components/CardsEco.astro";
 import { phone,email,hours,zonas, wp} from "~/data/config.ts";
 
-
-
-// Images
-import NewBackground from "~/assets/images/manopata.webp";
-
 ---
 
 <Layout title="Infinitos" pageTitle="Infinitos" description="Servicios de cremación de mascotas con respeto y sensibilidad. Acompañamos cada paso con cuidado.">
@@ -20,8 +15,8 @@ import NewBackground from "~/assets/images/manopata.webp";
 	<Section class:list={"relative"}>
 		<!-- FONDO DE COLOR DE RESPALDO -->
 		<div class="absolute inset-0 bg-[#D8B7A4] z-0"></div>
-		<Picture
-			src={NewBackground}
+		<img
+			src="/manopata.webp"
 			alt="Perro y persona compartiendo un momento de despedida"
 			class:list={"absolute inset-0 w-full h-full object-cover"}
 			loading={"eager"}
@@ -93,8 +88,8 @@ import NewBackground from "~/assets/images/manopata.webp";
 	  
 	
 	  <Section class:list={"relative bg-[#3A725F]"}>
-		<Image 
-		  src={NewBackground} 
+		<img
+		  src="/manopata.webp"
 		  alt="Fondo de despedida" 
 		  class:list={["absolute inset-0 w-full h-full object-cover opacity-30"]} 
 		/>
@@ -136,7 +131,7 @@ import NewBackground from "~/assets/images/manopata.webp";
 				<!-- Columna 2 -->
 				<div class="space-y-6">
 				  <h3 class="text-2xl font-bold font-sans">Horarios</h3>
-				  <span>{hours.label}</span>
+				  <span>{hours.label}</span><br>
 				  <span>{wp.label}</span>
 
 				  
